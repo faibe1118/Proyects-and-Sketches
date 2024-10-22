@@ -1,0 +1,28 @@
+```sql
+select sum(sal) 'Suma de salarios' from emp;
+
+select count(*) 'Número de empleados' from emp;
+
+select count(comm) from emp;
+
+select max(sal) 'Salario maximo', min(sal) 'Salario minimo' from emp;
+
+select round(avg(sal)) 'Promedio de solarios' from emp;
+
+select id_deptno, sum(sal) "Nomina por departamento" from emp group by id_deptno having sum(sal) >= 10000;
+
+select count(*) 'Número de empleados', id_deptno from emp group by id_deptno having count(*) between 3 and 6;
+
+select max(sal) 'salario maximo', min(sal) 'salario minimo', id_deptno 'Departamento' from emp where job in('ANALIST', 'MANAGER') group by id_deptno;
+
+/*
+- select ---> columna,operaciones, función de grupo
+
+- where ---> condición
+
+- group by ---> colunma para agrupar
+
+- having ---> consicion de funcion de grupo
+
+- order by ---> ordena 
+*/
