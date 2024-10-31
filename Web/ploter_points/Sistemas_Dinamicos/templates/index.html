@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificadora de puntos críticos</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Ecuaciones Lineales</h1>
+    </header>
+
+    <main>
+        <form id="ecuaciones-form">
+            <h2>Ingrese los coeficientes:</h2>
+
+            <div class="ecuacion">
+                <label for="a11">x' =</label>
+                <input type="number" id="a11" name="a11" required>
+                <span>x +</span>
+                <input type="number" id="a12" name="a12" required>
+                <span>y</span>
+            </div>
+
+            <div class="ecuacion">
+                <label for="a21">y' =</label>
+                <input type="number" id="a21" name="a21" required>
+                <span>x +</span>
+                <input type="number" id="a22" name="a22" required>
+                <span>y</span>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Analizar</button>
+                <button type="button" id="graficar-btn">Graficar</button>
+            </div>
+        </form>
+
+        <h2>Resultados:</h2>
+        <pre id="resultados">Aquí aparecerán los resultados...</pre>
+
+        <h2>Gráfica del Sistema:</h2>
+        <img id="graph" src="" alt="Gráfica del sistema" style="display:none; width: 100%; max-width: 600px;">
+
+    </main>
+
+    <script src="../static/script.js"></script>
+
+</body>
+</html>
